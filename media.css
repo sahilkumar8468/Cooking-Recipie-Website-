@@ -1,0 +1,19 @@
+
+@media screen and (max-width:600px){
+    header nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav form{
+        /* width: 100%; */
+        margin-top: 20px;
+
+    }
+
+    .searchBtn{
+        margin-top: 10px;
+    }
+}

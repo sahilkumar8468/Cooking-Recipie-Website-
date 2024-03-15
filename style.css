@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Roboto+Condensed&family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Heebo', sans-serif;
+}
+
+
+    
+    .header-nav{
+    background-image: linear-gradient(135deg, #cfd9df 10%, #e2ebf0 100%);
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 3rem ;
+}
+
+.header-nav [type="search"]{
+    padding: 7px;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.header-nav [type="submit"]{
+    padding:7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: backgorund-color 0.2s ease-in-out;
+    background-color: rgb(230, 224, 224);
+}
+
+.header-nav [type="submit"]:hover, .recipe button:hover, .recipe-close-btn:hover {
+    background-color: #c5c6c7;
+}
+
+.recipe-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:40px;
+    padding: 20px;
+    width: 90%;
+    place-items: center;
+    margin: 10px auto;
+}
+
+.recipe-container h2 
+{
+    text-align: center;
+    justify-content: center;
+    /* display: flex; */
+    margin-block: 30px;
+}
+ 
+.recipe{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    max-width: 350px;
+    box-shadow: 0px 5px 10px rgba(78,73,73,0.1),-5px -5px 10px rgba(34,34,34,0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.recipe:hover{
+    transform: scale(1.02);
+}
+
+
+.recipe img{
+    height: 300px;
+    width: 350px;
+}
+
+.recipe h3{
+font-size: 24px;
+display: flex;
+justify-content: center;
+margin-block:5px;
+}
+
+.recipe p{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin:4px 0 ;
+    color: #4a4a4a;
+}
+
+.recipe span{
+    font-weight: 600;
+    padding-inline: 5px;
+}
+
+.recipe button{
+    font-weight: 600;
+    background-color: rgb(230, 224, 224);
+    border: none;
+    border-radius: 5px;
+    margin: 18px auto;
+    padding: 10px 40px ;
+    cursor: pointer;
+}
+
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-image: linear-gradient(135deg, #cfd9df 10%, #e2ebf0 100%);
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+
+}
+/* Adding scrollbar to recipe details popup */
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb{
+    background-color: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius:16px;
+}
+
+
+body::-webkit-scrollbar{
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-image: linear-gradient(135deg, #b0b9be 10%, #9eabb3 100%);
+}
+
+body::-webkit-scrollbar-track{
+    background:#ebebeb ;
+}
+
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+.ingredientList li{
+    margin-bottom: 7px;
+    margin-left:50px;
+}
+
+.ingredientList-h3{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.recipeInstructions{
+    margin-left: 10px;
+    line-height: 30px;
+    white-space:pre-line;
+    padding-inline: 10px;
+}
+
+.recipe-close-btn{
+    padding:7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: backgorund-color 0.2s ease-in-out;
+    background-color: rgb(230, 224, 224);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+.error img{
+    display: flex;
+    flex-direction: column;
+}
